@@ -17,7 +17,7 @@
       <ul class="list-group">
 
         <!-- Menu 1-->
-        <li class="list-group-item"><a href="bill/CM_Bill">Cross Match Billing</a></li>
+        <li class="list-group-item"><a href="bill/Input_bill">Cross Match Billing</a></li>
             
         <!-- Menu2 -->
         <li class="list-group-item"><a href="bill/Final_Bill">Final Billing</a></li>

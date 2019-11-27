@@ -125,6 +125,15 @@
 
 			<!-- Col 11 -->
 			<?php include_once "Admin/admin.php";?>
+
+			<!-- Col 11 -->
+			<?php include_once "Component/component.php";?>
+
+			<!-- Col 11 -->
+			<?php include_once "QC/qc.php";?>
+
+			<!-- Col 11 -->
+			<?php include_once "TTI/tti.php";?>
 			
 
             <div id="userform" class="modal fade" role="dialog">

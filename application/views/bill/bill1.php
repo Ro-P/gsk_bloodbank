@@ -37,14 +37,6 @@ var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds(
 
 	</style>
 
-<?php $i=1; foreach($recipients_val as $row): ?>
-    <td><?=$row->rec_id;?></td>
-    <td><?=$row->patient_name;?></td>
-    <td><?=$row->date;?></td>
-	<td><?=$row->bgrp;?></td>
-    <td><?=$row->sex;?></td>
-    </tr>
-<?php $i++; endforeach;?>
 
 
 	<div  style="margin : 2%";>
@@ -57,9 +49,9 @@ var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds(
 			<td colspan=4>
 			<div>
 				
-				Patient : <?=$row->patient_name;?><br>
+				Patient : <?php $patient_name ?><br>
 				Hospital/Dr:<br>
-				Blood Group : <?=$row->bgrp;?><br>
+				Blood Group : <br>
 			</div>
 			</td>
 			<td colspan=2>	
@@ -116,6 +108,70 @@ var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds(
 
 <h6>Terms and condition:Blood/Component unit will be kept reserved for <b>3 Days Only</b>.Afterwords,it may be issued to other Patient.No refund will be given back.</h6>
 </div>
+</div>
+</div>
+	
+
+    <!-- Modal content-->
+	<div align ="center">
+    <div><button class="btn btn-danger" type="add" style="float:right; margin:1%">Exit</button></div>
+    <div><button class="btn btn-warning" type="add" style="float:right; margin:1%">Cancel</button></div>
+    <div><button class="btn btn-success" type="add"  data-toggle="modal" data-target="#existing" style="float:right; margin:1%">Add</button></div>
+    <!-- <div><button class="btn btn-danger" type="save">Save</button></div> -->
+    <!-- Modal -->
+    <div id="existing" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Choose Patient</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+
+      <table class="table table-hover table-bordered results">
+                        <thead>
+                            <tr>
+                                <th>Sr no</th>
+                                <th>ID</th>
+                                <th>Patient Name</th>
+                                <th>Req Date Time</th>
+                                <th>B Group</th>
+                                <th>Sex</th>
+                            </tr>
+                            <!-- <tr class="warning no-result">
+                                <td colspan="4"><i class="fa fa-warning"></i> No result</td>
+                            </tr> -->
+                        </thead>
+                        <tbody>
+                            <?php $i=1; foreach($all_recipients as $row):?>
+                            <tr>
+                            <td><?=$i?></td>
+                                <td><?=$row->rec_id;?></td>
+                                <td><?=$row->patient_name;?></td>
+                                <td><?=$row->date;?></td>
+                                <td><?=$row->bgrp;?></td>
+                                <td><?=$row->sex;?></td>
+
+                            </tr>
+                            <?php $i++; endforeach;?>
+                            
+                        </tbody>
+        </table>                    
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+    
+</div>
+</div>
+
 	</body>
 </html>
 

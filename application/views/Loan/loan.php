@@ -7,7 +7,7 @@
 </div>
 
 <div id="loan" class="modal fade" role="dialog">
-  <div class="modal-dialog">
+  <div class="modal-dialog" style="max-width:750px;">
 
     <div class="modal-content">
       <div class="modal-header">
@@ -21,11 +21,11 @@
             <!-- Sub Menu 1-->
             <div id="collapse1" class="panel-collapse collapse">
                 <ul class="list-group">
-                    <li class="list-group-item"><a href="">Loan Bank Master</a></li>
+                    <li class="list-group-item"><a href="loan_bank">Loan Bank Master</a></li>
                     <li class="list-group-item"><a href="loan_request">Loan Request</a></li>
-                    <li class="list-group-item"><a href="">Loan Outward</a></li>
-                    <li class="list-group-item"><a href="">Allot for Fractionation</a></li>
-                    <li class="list-group-item"><a href="">Send to Fractionation</a></li>
+                    <li class="list-group-item"><a href="loan_outward">Loan Outward</a></li>
+                    <li class="list-group-item"><a href="allot_fraction">Allot for Fractionation</a></li>
+                    <li class="list-group-item"><a href="send_fraction">Send to Fractionation</a></li>
                 </ul>  
             </div>
             <!-- Sub Menu1 End -->

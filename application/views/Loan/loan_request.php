@@ -44,9 +44,7 @@ button{
 }
 
 </style>
-
-
-    <script>
+<script>
 function getdate(){
 
 	var today = new Date();
@@ -155,7 +153,7 @@ function getdate(){
 
     <!-- Modal -->
     <div id="existing" class="modal fade" role="dialog">
-  <div class="modal-dialog">
+  <div class="modal-dialog" style="max-width:750px;">
 
     <!-- Modal content-->
     <div class="modal-content">

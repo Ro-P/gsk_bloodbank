@@ -84,6 +84,11 @@ $route['donor_reports'] = 'Reports_ctrl/donor_reports';
 $route['getDonors'] = 'Reports_ctrl/getDonorInfo';
 
 $route['loan_request'] = 'Loan_ctrl/loan_request';
+$route['loan_bank'] = 'Loan_ctrl/loan_bank';
+$route['loan_outward'] = 'Loan_ctrl/loan_outward';
+$route['allot_fraction'] = 'Loan_ctrl/allot_fraction';
+$route['send_fraction'] = 'Loan_ctrl/send_fraction';
+
 
 $route['user_registration'] = 'Admin_ctrl/user_registration';
 $route['user_registration_entry'] = 'Admin_ctrl/user_registration_entry';
@@ -91,6 +96,12 @@ $route['user_permission'] = 'Admin_ctrl/user_permission';
 $route['user_deactivation'] = 'Admin_ctrl/user_deactivation';
 $route['bill_delete'] = 'Admin_ctrl/bill_delete';
 $route['patient_detail_edit'] = 'Admin_ctrl/patient_detail_edit';
+
+$route['TTI'] = 'TTI/elisaSample';
+
+//$route['patient_detail_edit'] = 'Admin_ctrl/patient_detail_edit';
+
+
 
 
 $route['translate_uri_dashes'] = FALSE;
