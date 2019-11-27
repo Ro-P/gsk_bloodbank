@@ -27,5 +27,16 @@
                     <li class="list-group-item">Three</li>
                 </ul>  
             </div>
+        </li>
+      </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 </body>
 </html>
