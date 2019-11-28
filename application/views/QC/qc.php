@@ -23,6 +23,8 @@
                 <ul class="list-group">
                     <li class="list-group-item"><a href="QC/blood_bags">Blood Bags</a></li>
 										<li class="list-group-item"><a href="QC/reports">Blood bags QC reports details</a></li>
+										<li class="list-group-item"><a href="QC/reagent">Reagent Daily QC</a></li>
+										<li class="list-group-item"><a href="QC/preparations">Preaparations and QC of pooled ces</a></li>
                     
                     <li class="list-group-item">Three</li>
                 </ul>  

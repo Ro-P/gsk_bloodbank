@@ -1,3 +1,4 @@
+<html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,23 +23,28 @@
 	<form method="post" style="padding:30px;">
 	<div class="form-group row">	
 	<div class="col-md-4">
-		<label  class="col-form-label">Blood Component:</label>
+		<label  class="col-form-label">Department:</label>
 					
-						<select type="text" class="form-control" id="component">
+						<select type="text" class="form-control" id="department">
 							<option></option>
 							<option>..</option>
 						</select>
 					</div>
-					<div class="col-md-4">
-		<label  class="col-form-label">Blood Component:</label>
-			
-				<input type="text" class="form-control" id="barcode">
 
-		</div>
+		<div class="col-md-4">
+		<label  class="col-form-label">Item name:</label>
+					
+					<select type="text" class="form-control" id="item_name">
+						<option></option>
+						<option>..</option>
+					</select>
+				</div>
+
+
 		</div>
 		<div class="form-group row">
 		<div class="col-md-4">	
-	<label class="col-form-label">Sample Received Date from:</label> 
+	<label class="col-form-label">Issue date:</label> 
                     
                     	<input type="date" id="today" name="my_date" class="form-control" >
                     </div>
@@ -48,34 +54,29 @@
                     	<input type="date" id="today1" name="my_date" class="form-control" >
                     </div>
 					<div class="col-md-4">
-					<button type="button" class="btn btn-success" style="margin:40px;">Go</button>
+					<button type="button" class="btn btn-success" style="margin:40px;">Search</button>
 					</div>
 
 	</div>
 
-	<div class="card-new">
-                    
-                <div class="card text-center" >
-                    
-                <div class="card-body">
-                        
-                    
-					<table class="table">
-                            <thead>
-                                <tr>
-                                <th scope="col">Sr No</th>
-                                <th scope="col">QCDate</th>
-                                <th scope="col">BBarCode</th>
-                                <th scope="col">Component</th>
-                                <th scope="col"> Expiry Date</th>
-                               
-                                </tr>
-                            </thead>
-						</table>
+	<div class="form-group row">
+		<div class="col-md-8">	
+	<label class="col-form-label">Appearance:</label> 
+                    	<input type="text" class="form-control" >
+                    </div>
 
-					
-				</div>
-			</div>
+		</div>
+
+		<div class="form-group row">
+		<div class="col-md-4">	
+			<label class="col-form-label">Lot No.:</label> 
+                    	<input type="text" class="form-control" id="lotno">
+        </div>
+		<div class="col-md-4">	
+		<label class="col-form-label">Expiry</label> 
+                    
+					<input type="date" id="today2" name="my_date" class="form-control" >
+		</div>
 		</div>
 
 		<div class="but" style="text-align:center; margin:30px;">
@@ -86,9 +87,11 @@
 				<button type="button" class="btn btn-secondary">Edit</button>
             </div>
 
-</form>
 
-<script>
+
+	</form>
+
+	<script>
            let today = new Date().toISOString().substr(0, 10);
             document.querySelector("#today").value = today;
             document.querySelector("#today1").value = today;
@@ -97,7 +100,6 @@
         </script>
 
 
+	</body>
 
-
-</body>
 </html>

@@ -21,59 +21,67 @@
 	<?php include_once "application/views/nav.php"?>
 	<form method="post" style="padding:30px;">
 	<div class="form-group row" >
-
+					<div class="col-md-4">
                     <label class="col-form-label ">Sample Received date:</label> 
-                    <div class="col-sm-3">
+					
+                    
                     	<input type="date" id="today" name="my_date" class="form-control" >
-                    </div>
-				
+					</div>
+                    
+					<div class="col-md-4">
 				<label  class="col-form-label ">Bag Count:</label>
 				
-                <div class="col-sm-2">
+                
                 <input type="text" class="form-control" id="bagcount">
                 </div>
+				</div>
             
     </div>
 	<div class="form-group row">	
+	<div class="col-md-4">
 		<label  class="col-form-label">Blood Component:</label>
-					<div class="col-sm-3">
+
 						<select type="text" class="form-control" id="component">
 							<option></option>
 							<option>..</option>
 						</select>
 					</div>
 
-		
+					<div class="col-md-4">
 					<label  class="col-form-label">Blood BagBarcode:</label>
-                <div class="col-sm-3">
+                
                 <input type="text" class="form-control" id="barcode">
                     
                 </div>
 	</div>
 
 	<div class="form-group row">	
+	<div class="col-md-4">
 	<label class="col-form-label">Bleeding date:</label> 
-                    <div class="col-sm-3">
+                   
                     	<input type="date" id="today" name="my_date" class="form-control" >
                     </div>
-
+					<div class="col-md-4">
 					<label class="col-form-label">Expiry date:</label> 
-                    <div class="col-sm-3">
+                   
                     	<input type="date" id="today" name="my_date" class="form-control" >
                     </div>
 
 	</div>
 
 	<div class="form-group row">
+	<div class="col-md-4">
 
 		<label  class="col-form-label">Segment Number:</label>
-                <div class="col-sm-3">
+               
                 <input type="text" class="form-control" id="barcode">
                     
                 </div>
-
-				<button type="button" class="btn btn-primary" style="margin:10px">Add</button>
+				<div class="col-sm-4">
+				<button type="button" class="btn btn-primary" style="margin:40px">Add</button>
+				
 				<button type="button" class="btn btn-danger" style="margin:10px">Delete</button>
+				</div>
 
 	</div>
 	<div class="card-new">
@@ -103,15 +111,17 @@
 
 		<div class="form-group row" style="margin:30px;">
 
+		<div class="col-md-4">
+
 		<label  class="col-form-label">Segment Number:</label>
-                <div class="col-sm-3">
+               
                 <input type="text" class="form-control" id="barcode">
                     
                 </div>
 		
-
+				<div class="col-md-4">
 		<label  class="col-form-label">Remarks:</label>
-                <div class="col-sm-3">
+               
                 <input type="text" class="form-control" id="barcode">
                     
                 </div>

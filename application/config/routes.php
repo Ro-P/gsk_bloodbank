@@ -106,3 +106,11 @@ $route['TTI'] = 'TTI/elisaSample';
 
 $route['translate_uri_dashes'] = FALSE;
 $route['check_login'] = "Login/user_login";
+$route['bill'] = "Bill/CM_Bill";
+$route['bill'] = "Bill/Final_Bill";
+$route['component'] = "Component/process";
+$route['component'] = "Component/separation";
+$route['component'] = "Component/discard";
+$route['component'] = "Component/autoclave";
+$route['qc'] = "QC/blood_bags";
+$route['qc'] = "QC/reports";
