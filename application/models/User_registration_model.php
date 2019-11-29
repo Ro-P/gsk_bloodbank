@@ -12,5 +12,10 @@
             $query = $this->db->get("user_registration");
             return $query->result();
         }
+        public function deleteRegUser($userid){
+            $this->load->database();
+            $this->db->where("id" , $userid);
+            $this->db->delete("user_registration");
+        }
 	}
 ?>

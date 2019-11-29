@@ -96,7 +96,7 @@ $route['user_permission'] = 'Admin_ctrl/user_permission';
 $route['user_deactivation'] = 'Admin_ctrl/user_deactivation';
 $route['bill_delete'] = 'Admin_ctrl/bill_delete';
 $route['patient_detail_edit'] = 'Admin_ctrl/patient_detail_edit';
-
+$route['user_deactivation_action'] = "Admin_ctrl/user_deactivation_action";
 $route['TTI'] = 'TTI/elisaSample';
 
 //$route['patient_detail_edit'] = 'Admin_ctrl/patient_detail_edit';

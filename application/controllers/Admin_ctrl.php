@@ -78,5 +78,10 @@ class Admin_ctrl extends CI_Controller{
         $this->load->view("nav.php");
         $this->load->view("Admin/patient_detail_edit.php");
     }
+    public function user_deactivation_action(){
+        $this->load->model("User_registration_model");
+        $this->User_registration_model->deleteRegUser($this->input->post("user_id"));
+        header("Location:user_deactivation?success=1");
+    }
 }
 ?>

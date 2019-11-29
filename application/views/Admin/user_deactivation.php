@@ -97,8 +97,16 @@ function getdate(){
     
 <div class="container-fluid">
     <button class="btn btn-primary back" style="margin-top : 1%"; type="button" ><a href="home" style="color:white";><i class="fa fa-arrow-left" style="color:white";></i> Back</a></button>
-    
-    <form style="padding-right: 0px;margin-right: 0px;margin-left: 0px;" method="post" action="">
+    <?php
+      if(isset($_GET["success"])){
+        ?>
+          <div class="alert alert-success">
+            <strong>Success!</strong> Indicates a successful or positive action.
+          </div>
+        <?php
+      }
+    ?>
+    <form style="padding-right: 0px;margin-right: 0px;margin-left: 0px;" method="post" action="user_deactivation_action">
 
         <!-- <div class="form-row" style="margin-top : 1%";>
             <div class="form-group col-md-4"><label>Full Name :</label><input type="text" class="form-control" id="full_name"/></div>
@@ -144,7 +152,7 @@ function getdate(){
                 </thead>
                 <tbody>
                 <?php $i=1; foreach($all_user as $row): ?>
-                  <tr onclick="enterdetails('<?=$row->name?>','<?=$row->joining_date?>','<?=$row->user_type?>')">
+                  <tr onclick="enterdetails('<?=$row->name?>','<?=$row->joining_date?>','<?=$row->user_type?>','<?=$row->id?>')">
                     <td><?=$i?></td>
                     <!-- <td><?=$row->id;?></td> -->
                     <td><?=$row->user_type;?></td>
@@ -169,10 +177,10 @@ function getdate(){
       </div>
 
         <div class="form-row" style="margin-top : 1%";>
-            <div class="form-group col-md-4"><label>Full Name : </label><input type="text" class="form-control" id="full_name"/></div>
+            <div class="form-group col-md-4"><label>Full Name : </label><input type="text" class="form-control" id="full_name" name="full_name"/></div>
             <div class="form-group col-md-4"><label>Registration Date :</label><input type="date" class="form-control" id="reg_date" name="join_date" /></div>
             <div class="form-group col-md-4"><label>User Type : </label>
-      			<select class="form-control" id="user_type">
+      			<select class="form-control" id="user_type" name="user_type">
         			<option>abc</option>
         			<option>no</option>
       			</select>
@@ -180,7 +188,7 @@ function getdate(){
         </div>
 
         <div class="form-row" style="margin-top : 1%";>
-            <div class="form-group col-md-4"><label>Deactivation Date :</label><input type="date" class="form-control" id="deactivation_date" name="dob_date" /></div>
+            <div class="form-group col-md-4"><label>Deactivation Date :</label><input type="date" class="form-control" id="deactivation_date" name="deactivation_date" /></div>
             <div class="form-group col-md-4"><label>Deactivation Reason : </label>
       			<select class="form-control" id="sel1">
         			<option>+</option>
@@ -188,11 +196,12 @@ function getdate(){
       			</select>
             </div>
             <div class="form-group col-md-4"><label>Deactivation Type : </label>
-      			<select class="form-control" id="">
+      			<select class="form-control" id="" name="deactivation_date">
         			<option>1</option>
         			<option>2</option>
       			</select>
             </div>
+            <input type="hidden" id="user_id" name="user_id">
         </div>
 
         <div class="form-row" style="margin-top : 1%";>
@@ -203,6 +212,7 @@ function getdate(){
         <div><button class="btn btn-danger" type="close" style="float:right; margin:1%">Exit</button></div>
         <div><button class="btn btn-warning" type="reset" style="float:right; margin:1%">Cancel</button></div>
         <div><button class="btn btn-success" type="add"  data-toggle="modal" data-target="#existing" style="float:right; margin:1%">Add</button></div>
+
         <div><button class="btn btn-primary" type="submit" style="float:right; margin:1%">Submit</button></div>
     </div>
     </div>
@@ -285,10 +295,11 @@ $(".custom-file-input").on("change", function(){
 </script>
 
 <script>
-function enterdetails(fname, rdate, utype){
+function enterdetails(fname, rdate, utype,uid){
     document.getElementById("full_name").value = fname;
     document.getElementById("reg_date").value = rdate;
     document.getElementById("user_type").value = utype;
+    document.getElementById("user_id").value = uid;
     // var fullname = name.split(" ");
     // document.getElementById("patient").value = name;   
 }
