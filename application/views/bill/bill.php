@@ -21,6 +21,10 @@
             
         <!-- Menu2 -->
         <li class="list-group-item"><a href="bill/Final_Bill">Final Billing</a></li>
+
+				<li class="list-group-item"><a href="bill/bagcrossmatch">Bag crossmatch Billing</a></li>
+
+				<li class="list-group-item"><a href="bill/request_billing">Blood Request Billing</a></li>
             
     </ul>   
       </div>

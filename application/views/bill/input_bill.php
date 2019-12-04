@@ -20,7 +20,7 @@
 
 <?php include_once 'application\views\nav.php'; ?>
 <h2 style="text-align:center; margin:1%;">---Billing---</h2>
-<form action="Bill_action" style="margin:2%;" method="post">
+<form action="Bill_action" style="margin:2%;" method="post" ">
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="text">Patient name:</label>
@@ -53,7 +53,7 @@
     </div>
     <div class="form-group col-md-2">
       <label >Quantity</label>
-      <input type="text" class="form-control" id="description" name="quantity">
+      <input type="number" class="form-control" id="quantity" name="quantity">
     </div>
     <div class="form-group col-md-2">
       <label >Charges</label>
@@ -73,14 +73,39 @@
     </div> 
     <div class="form-group col-md-2">
       <label >Amount</label>
-      <input type="text" class="form-control" id="=amount" name="amount" >    
+      <input type="text" class="form-control" id="=amount" name="amount1" >    
     </div>   
 
 </div>
   <div class="form-group">
    
   </div>
-  <button type="submit" class="btn btn-primary">Save</button>
-  </div>
+  <button type="submit" class="btn btn-primary" onclick="validate()">Save</button>
+  <a href="CM_Bill" type="button" class="btn btn-primary">bill</a>
+	</div>
+
+
 </form>
+<!-- <script>
+	function validate(){
+
+		var quantity = document.getElementById('quantity').value;
+		var quanregex = /^[0-9]+$/;
+		var Result = quanregex.test(quantity);
+		if (Result == false){
+		alert("Alphabets not allowed"+Result);
+		}
+		else{
+			return true;
+		}
+		var charges  = document.getElementById('charges').value;
+		var amount = document.getElementById('amount').value;
+		var result = charges*amount;
+		document.write(2);
+
+
+
+	}
+</script> -->
 </body>
+</html>
